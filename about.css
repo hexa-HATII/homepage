@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ultraLightGilroyFont;
+    src: url(./fonts/Gilroy-UltraLight.woff); /* weight 200 */
+  }
+  
+  @font-face {
+    font-family: lightGilroyFont;
+    src: url(./fonts/Gilroy-Light.woff); /* weight 300 */
+  }
+  
+  @font-face {
+    font-family: regularGilroyFont;
+    src: url(./fonts/Gilroy-Regular.woff); /* weight 400 */
+  }
+  
+  @font-face {
+    font-family: mediumGilroyFont;
+    src: url(./fonts/Gilroy-Medium.woff); /* weight 500 */
+  }
+  
+  @font-face {
+    font-family: semiBoldGilroyFont;
+    src: url(./fonts/Gilroy-SemiBold.woff); /* weight 600 */
+  }
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+.container {
+    /* background: linear-gradient(90deg, #021116 0%, #041B23 11.94%, #06222B 19.27%, #031318 38.45%, #052028 61.92%, #02151C 79.86%, #041D25 89.52%, #02171E 99.19%, #082B37 119.06%, #000000 137.04%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    background: black;
+    color: white;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    padding-top: 15%;
+    position: relative;
+}
+
+.content > h1 {
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  font-family: regularGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content > p {
+  font-size: 25px;
+  font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0.9em 0;
+  width: 70%;
+  text-align: left;
+}
+
+.hexa-banner {
+  width: 100vw;
+  margin-bottom: 7%;
+}
+
+.headshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.headshot {
+  margin: 20px 40px;
+}
+
+.headshot > p {
+  margin: 10px 0;
+}
+
+.name {
+  font-family: regularGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.role {
+  font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 0.9em;
+}
+
+.copyright {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+.copyright > p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.title {
+  margin: 10px 30px;
+}
+
+
+.title > a {
+  font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.navbar {
+display: flex;
+position: fixed;
+width: 100vw;
+justify-content: space-between;
+align-items: center;
+color: white;
+z-index: 3;
+/* background: linear-gradient(90deg,#021116 0%, #041B23 11.94%, #06222B 19.27%, #031318 38.45%, #052028 61.92%, #02151C 79.86%, #041D25 89.52%, #02171E 99.19%, #082B37 119.06%, #000000 137.04%); */
+background: rgba(0, 0, 0, 0.75);
+
+}
+
+.navbar-links ul {
+margin: 0;
+padding: 10px 20px;
+display: flex;
+}
+
+.signup-navlink {
+border-radius: 50px;
+padding: 0 8px;
+text-align: center;
+background: linear-gradient(178.44deg, #659DB5 1.33%, #1B4F5F 131.51%);
+}
+
+.signup-navlink:hover {
+background: linear-gradient(180deg, #FFFFFF 0%, #659DB5 143.55%);
+transition: ease-out 0.5s;
+}
+
+.signup-navlink > a:hover {
+color: rgba(13, 62, 78, 1);
+transition: ease-out 0.5s;
+}
+
+.navbar-links li {
+list-style: none;
+margin: 10px 15px;
+}
+
+.navbar-links li a, .mobile-signup-link > a {
+text-decoration: none;
+border: none;
+color: white;
+padding: 10px 6px;
+opacity: 0.6;
+display: block;
+font-size: 14px;
+font-family: lightGilroyFont, sans-serif;
+}
+
+.navbar-links li a:hover, .mobile-signup-link > a:hover {
+opacity: 1;
+transition: ease-out 0.5s;
+}
+.navbar-links  li:last-child a, .mobile-signup-link:last-child > a {
+opacity: 1;
+}
+
+.navbar-links li a.clicked {
+transition: all 1s ease-out;
+}
+
+.mobile-signup-link {
+display: none;
+position: absolute;
+top: .5rem;
+right: 1rem;
+border-radius: 50px;
+padding: 0 8px;
+text-align: center;
+background: linear-gradient(178.44deg, #659DB5 1.33%, #1B4F5F 131.51%);
+}
+
+
+.toggle-button {
+position: absolute;
+top: .75rem;
+left: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background: white;
+border-radius: 10px;
+}
+
+  @media screen and (max-width: 1500px) {
+    
+  }
+
+  @media screen and (max-width: 1200px) {
+    .content > p {
+      font-size: 18px;
+    }
+    .hexa-banner {
+      margin-bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .content > h1 {
+      width: 60%;
+      font-size: 30px;
+      margin: 5% 0;
+    }
+    .content > p {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 690px) {
+    .toggle-button {
+      display: flex;
+    }
+  
+    .mobile-signup-link {
+      display: block;
+    }
+  
+    .signup-navlink {
+      display: none;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navbar-links.active {
+      display: inline;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      opacity: 0.99;
+    }
+  
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+      padding: 40px 0;
+    }
+  
+    .navbar-links li a {
+      text-align: center;
+      font-size: 16px;
+      opacity: 1;
+    }
+  
+    .navbar-links li a {
+      padding: 10px;
+    }
+  }
+
+
+  @media screen and (max-width: 590px) {
+    .content > h1 {
+      width: 80%;
+      font-size: 22px;
+      margin: 10% 0;
+    }
+    .headshots {
+      margin-top: 10px;
+    }
+    .content > p {
+      font-size: 15px;
+      margin: 0.8em 0;
+      width: 90%;
+    }
+    .copyright > p {
+      font-size: 12px;
+    }
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CZ624VNM1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2CZ624VNM1');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="favicon-hexa.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hexa</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class='container'>
+        <nav class="navbar">
+            <div class="title"><a href="index">hexa</a></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a class="toggle-navbar" href="index#mission">Mission</a></li>
+                    <li><a class="toggle-navbar" href="index#products">Features</a></li>
+                    <!-- <li><a href="https://myhexaa.bamboohr.com/careers" target=”_blank”>Hiring!</a></li> -->
+                    <li><a href="about">About Hexa</a></li>
+                    <li class="signup-navlink"><a href="index#signup">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="mobile-signup-link"><a href="index#signup">Sign up</a></div>
+        </nav>
+        <div class="content">
+            <h1>Democratising, Digitising, and Personalising International Curriculums.</h1>
+            <img class="hexa-banner" src="hexa-banner.png" alt="about-us-hexa-logo"/>
+            <p>At hexa, we aspire to create the next generation educational platform that will adequately equip every student, regardless of their socio economic backgrounds, to navigate an ever-changing world, which has become more unstable than ever. We aim to build the ultimate generation of problem solvers, capable of shaping the future and beyond, by redefining education fundamentally.</p>
+
+            <p>We wish to achieve our mission by democratizing and personalizing high-quality education for students studying in different curricula, starting off with the International British Curriculum.</p>
+                
+            <p>With our product we want to ensure that students learn fast with cinematic bite-sized content and practice smart with carefully engineered study tools. Imagine a place where you could access Khan Academy like courses directed by Christoper Nolan, and study tools, practice papers, quizzes like those found in CourseHero. It’s like Outlier, CourseHero and Brilliant combined into one platform, but with a key difference - we are building for secondary school students studying in different curricula!</p>
+            <br/><br/><br/>
+            <h1>The Dream Team</h1>
+            <div class="headshots">
+                <div class="headshot">
+                    <img src="headshots/Hamza.png" alt="co-founder-headshot"/>
+                    <p class="name">Hamza Yusuff</p>
+                    <p class="role">Chief Executive Officer</p>
+                </div>
+                <div class="headshot">
+                    <img src="headshots/Irteza.png" alt="co-founder-headshot"/>
+                    <p class="name">Irteza Ahmed</p>
+                    <p class="role">Chief Operations Officer</p>
+                </div>
+                <div class="headshot">
+                    <img src="headshots/Yasir.png" alt="co-founder-headshot"/>
+                    <p class="name">Yasir Mohiuddin</p>
+                    <p class="role">Chief Creative Officer</p>
+                </div>
+                <div class="headshot">
+                    <img src="headshots/Taseen.png" alt="co-founder-headshot"/>
+                    <p class="name">A S M Taseen</p>
+                    <p class="role">Chief Technology Officer</p>
+                </div>
+            </div>
+            <div class="copyright"><p>All rights reserved @ 2023 Hexa Inc</p></div>
+        </div>
+    </div>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+        const toggleNavbar = document.getElementsByClassName('toggle-navbar');
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        })
+        for(let i = 0; i < toggleNavbar.length; i++) {
+          toggleNavbar[i].addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        })
+        }
+    </script>
+</body>
+</html>

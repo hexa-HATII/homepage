@@ -1,0 +1,1248 @@
+@font-face {
+  font-family: ultraLightGilroyFont;
+  src: url(./fonts/Gilroy-UltraLight.woff); /* weight 200 */
+}
+
+@font-face {
+  font-family: lightGilroyFont;
+  src: url(./fonts/Gilroy-Light.woff); /* weight 300 */
+}
+
+@font-face {
+  font-family: regularGilroyFont;
+  src: url(./fonts/Gilroy-Regular.woff); /* weight 400 */
+}
+
+@font-face {
+  font-family: mediumGilroyFont;
+  src: url(./fonts/Gilroy-Medium.woff); /* weight 500 */
+}
+
+@font-face {
+  font-family: semiBoldGilroyFont;
+  src: url(./fonts/Gilroy-SemiBold.woff); /* weight 600 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /* border: 1px solid red; */
+  }
+
+  .Container {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    display: flex; */
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: black;
+  }
+  
+  
+/* .hexa-video {
+  width: 60vw;
+  height: 70vh;
+  display: inline-block;
+  object-fit: cover;
+} */
+
+html {
+  overflow: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+
+.video {
+  width: 60vw;
+  height: 70vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.c-video {
+  position: relative;
+}
+
+.controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.buttons {
+  padding: 5px;
+}
+
+.buttons button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.buttons svg {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 28px;
+}
+
+#pause {
+  display: none;
+}
+
+.first-section {
+  width: 100vw;
+}
+
+.Poster-section {  
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Poster-section > img {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.8;
+  height: 700px;
+}
+
+.poster-text {
+  z-index: 2;
+  text-align: center;
+  width: 45%;
+}
+
+.poster-text > h3, .logo-section > h1 {
+    color: white;
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 52px;
+    line-height:55px;
+}
+
+
+.poster-text > p {
+    color:#ffffffba;
+    font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    padding: 0 10px;
+}
+
+/* School */
+.School-section {
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#school {
+position: absolute;
+right: 0;
+margin-right: 10%;
+text-align: center;
+z-index: 1;
+height: 800px;
+}
+
+.school-text {
+z-index: 2;
+text-align: left;
+padding-left: 20px;
+width: 70vw;
+}
+
+.school-text > h3, .paper-text > h3 {
+  color: white;
+  font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.school-text > h3 > span,  .paper-text > h3 > span, .poster-text > h3 span, .signup-box > p span {
+  background: linear-gradient(180deg, #F7DA8D 0%, #E19647 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.school-text > p , .paper-text > p {
+  color:#ffffffba;
+  font-family: regularGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  letter-spacing: -0.03em;
+  width: 50%;
+
+}
+
+
+
+
+.Best > h1 {
+    color: white;
+    font-family: mediumGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100.3%;
+    /* or 40px */
+
+    letter-spacing: -0.03em;
+    /* padding: 15% 15% 2.5% 15%; */
+  }
+
+  /* .arrow-flex > h3 {
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: left;
+    letter-spacing: -0.03em;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    padding-top: 1%;
+  } */
+
+  .Best > h1 > span {
+    background: linear-gradient(180deg, #F7DA8D 0%, #DB852E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  
+    font-weight: 600;
+    font-size: 160px;
+    line-height: 91.3%;
+    /* or 146px */
+
+    letter-spacing: -0.03em;
+  }
+
+  .pampering {
+    padding-top: 5%;
+}
+
+  .pampering > p {
+    color: white;
+    font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.03em;
+  }
+
+
+
+.title {
+    margin: 10px 30px;
+}
+
+
+.title > a {
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 3;
+  /* background: linear-gradient(90deg,#021116 0%, #041B23 11.94%, #06222B 19.27%, #031318 38.45%, #052028 61.92%, #02151C 79.86%, #041D25 89.52%, #02171E 99.19%, #082B37 119.06%, #000000 137.04%); */
+  background: rgba(0, 0, 0, 0.75);
+  
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.signup-navlink {
+  border-radius: 50px;
+  padding: 0 8px;
+  text-align: center;
+  background: linear-gradient(178.44deg, #659DB5 1.33%, #1B4F5F 131.51%);
+}
+
+.signup-navlink:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #659DB5 143.55%);
+  transition: ease-out 0.5s;
+}
+
+.signup-navlink > a:hover {
+  color: rgba(13, 62, 78, 1);
+  transition: ease-out 0.5s;
+}
+
+.navbar-links li {
+  list-style: none;
+  margin: 10px 15px;
+}
+
+.navbar-links li a, .mobile-signup-link > a {
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 10px 6px;
+  opacity: 0.6;
+  display: block;
+  font-size: 14px;
+  font-family: lightGilroyFont, sans-serif;
+}
+
+.navbar-links li a:hover, .mobile-signup-link > a:hover {
+  opacity: 1;
+  transition: ease-out 0.5s;
+}
+.navbar-links  li:last-child a, .mobile-signup-link:last-child > a {
+  opacity: 1;
+}
+
+.navbar-links li a.clicked {
+  transition: all 1s ease-out;
+}
+
+.mobile-signup-link {
+  display: none;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  border-radius: 50px;
+  padding: 0 8px;
+  text-align: center;
+  background: linear-gradient(178.44deg, #659DB5 1.33%, #1B4F5F 131.51%);
+}
+
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  left: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+.weapons {
+    position: absolute;
+    top: 2%;
+    right: 9%;
+
+    font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1% 2%;
+    background: #FFFFFF;
+    border-radius: 50px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+
+    color: #1B4F5F;
+
+    opacity: 0.8;
+
+    cursor: pointer;
+}
+
+.Landing {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Landing > img, #main {
+  position: absolute;
+  right: 300px;
+  padding-top: 7%;
+  height: 750px;
+}
+
+  .landing-text {
+    margin-left: 15%;
+  }
+
+  .landing-text > h1 {
+    color: white;
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 95px;
+    line-height: 85px;
+    letter-spacing: -0.03em;
+  }
+
+  .landing-text > h1 > span {
+    font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .landing-text > p > span {
+    background: linear-gradient(180deg, #F7DA8D -3.71%, #E19647 108.45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+  }
+
+  .landing-text > p {
+    color:#edebebcc;
+    font-family: mediumGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    letter-spacing: -0.03em;
+    width: 90%;
+  }
+
+
+  .arrow-flex > p {
+    font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 13px;
+    line-height: 16px;
+    padding-left: 62%;
+    letter-spacing: -0.03em;
+
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .arrow-flex > img {
+    height: 40px;
+  }
+
+
+
+  .arrow-flex {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    padding-top: 5%;
+  }
+
+  #papers {
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    height: 750px; /* play around with this to align book video */
+    left: -150px;
+  }
+
+.Papers, .Uni {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Papers {
+  margin-top: 3%;
+}
+
+.Papers-section {
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+  
+  .paper-text {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 15%;
+  width: 80vw;
+  }
+
+  .copyright {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+  }
+  .copyright > p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  
+  .Uni-section {
+    width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  }
+
+  #uni {
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    height: 750px; /* play around with this to align book video */
+    right: 0;
+  }
+  
+  .Uni > h1 {
+    color: white;
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    text-align: right;
+    padding: 15% 15% 2.5% 15%;
+  }
+  
+  .Uni > h1 > span {
+    background: linear-gradient(180deg, #F7DA8D 33.33%, #DB852E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .Alumni-section {
+
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  #alumni {
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    height: 1000px; /* play around with this to align book video */
+    left: 80px;
+
+  }
+  
+  
+
+  .Touch {
+    /* background: linear-gradient(266.4deg, rgba(10, 42, 54, 0.967) 1.53%, rgb(15, 16, 16) 93.24%) no-repeat center center fixed; */
+    background-color: white;
+  
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .Touch > h1 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    text-align: center;
+    padding-top: 15%;
+  }
+
+  .Touch > h3 {
+    color: white;
+    font-family: regularGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .Touch > p {
+    color: white;
+    font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 250;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    text-align: center;
+    padding-top: 3%;
+  }
+
+  .product {
+    color: white;
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    /* padding-top: 3%; */
+  }
+
+  .coming {
+    color: white;
+    font-family: ultraLightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 250;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+    font-style: normal;
+    /* padding-top: 3%; */
+  }
+
+.papers-coming {
+  margin-top: 1%;
+  margin-left: 53%;
+}
+
+.product-span {
+  font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.uni-coming {
+    margin-left: 77%;
+}
+
+.tutors-coming {
+    margin-left: 53%;
+}
+
+.alumni-coming {
+    margin-left: 74%;
+}
+
+/* Signup */
+.Signup-section {  
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Signup-section > img {
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+z-index: 1;
+opacity: 0.8;
+height: 800px;
+}
+
+.signup-box {
+  z-index: 2;
+  text-align: center;
+}
+
+.signup-box > h3 {
+    color: white;
+    font-family: semiBoldGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 68px;
+    letter-spacing: -0.03em;
+}
+
+.signup-box > p {
+    color:#ffffffba;
+    font-family: regularGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    padding: 0 5px;
+}
+
+
+.signupform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.signupform > input {
+  padding: 15px;
+  margin: 10px 0;
+  min-width: 350px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: none;
+}
+
+.signupform > input::placeholder {
+  color: rgb(193, 187, 180);
+}
+
+.submit-button {
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  width: fit-content;
+  font-size: 22px;
+  font-family: lightGilroyFont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 20px;
+  font-weight: 200;
+  border: none;
+  background: linear-gradient(178.44deg, #659DB5 1.33%, #1B4F5F 131.51%);
+  color: white;
+  text-decoration: none;
+}
+
+.submit-button:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #659DB5 143.55%);
+  color: rgba(13, 62, 78, 1);
+  transition: ease-out 0.5s;
+}
+
+
+
+/* responsiveness */
+
+@media screen and (max-width: 1700px) {
+  .landing-text > h1 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 1525px) {
+
+  .Landing {
+    align-items: center;
+  }
+
+  .landing-text {
+    margin-left: 12%;
+  }
+  .landing-text > h1 {
+    font-size: 70px;
+    line-height: 65px;
+  }
+
+  .landing-text > p {
+    font-size: 22px;
+  }
+  .Landing > img , #main {
+    height: 700px;
+    right: 250px;
+  }
+
+  #school, #papers, #uni {
+    height: 600px;
+  }
+
+
+  #alumni {
+    height: 800px;
+  }
+
+  .school-text > h3, .paper-text > h3 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .Signup-section > img {
+    height: 700px;
+  }
+
+  .signup-box > h3 {
+    font-size: 50px;
+  }
+  .signup-box > p {
+    font-size: 28px;
+  }
+
+}
+
+@media screen  and (max-width: 1380px) {
+  .landing-text {
+    margin-left: 13%;
+  }
+
+  #main {
+    height: 600px;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .landing-text > h1 {
+    font-size: 50px;
+    line-height: 48px;
+  }
+
+  .landing-text > p {
+    font-size: 18px;
+  }
+
+  #main {
+    height: 550px;
+  }
+
+  .Poster-section > img {
+    height: 600px;
+  }
+  
+  .poster-text > h3, .logo-section > h1 {
+    font-size: 42px;
+    line-height: 60px;
+      
+  }
+  
+  .poster-text > p {
+      font-size: 15px;
+  }
+
+  #school {
+    height: 500px;
+  }
+
+  #papers {
+    height: 500px;
+    left: 0;
+  }
+
+  #alumni {
+    height: 700px;
+  }
+
+  .school-text > h3, .paper-text > h3 {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  .school-text > p, .paper-text > p {
+    font-size: 15px;
+  }
+
+  .Signup-section > img {
+    height: 600px;
+  }
+
+  .signup-box > h3 {
+    font-size: 45px;
+  }
+  .signup-box > p {
+    font-size: 23px;
+  }
+  
+}
+
+
+@media screen and (max-width: 1125px) {
+  .Landing {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 2%;
+  }
+
+
+  .arrow-flex {
+    display: none;
+  }
+
+  .Landing > img, #main {
+    position: relative;
+    right: -50px;
+    height: 500px;
+  }
+
+  .landing-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% 0 0 0;
+  }
+
+  .landing-text > h1 {
+    font-size: 85px;
+    line-height: 85px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .landing-text > p {
+    font-size: 24px;
+  }
+
+
+  .Poster-section > img {
+    height: 450px;
+  }
+  
+  .poster-text > h3, .logo-section > h1 {
+    font-size: 35px;
+    line-height: 40px;
+      
+  }
+  
+  .poster-text > p {
+      font-size: 13px;
+  }
+
+  .School-section, .Papers-section, .Uni-section, .Alumni-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #papers, #uni {
+    position: relative;
+    margin-right: 0;
+    height: 420px;
+  }
+
+  #school {
+    position: relative;
+    margin-right: 0;
+    height: 480px;
+  }
+
+  #alumni {
+    position: relative;
+    margin-right: 0;
+    height: 520px;
+    left: 0;
+  }
+
+  .school-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 0;
+    width: 80vw;
+    padding: 5%;
+  }
+
+  .paper-text {
+    text-align: center;
+    margin-top: 10%;
+    width: 80vw;
+    padding: 5%;
+    align-items: center;
+  }
+
+  .school-text > h3, .paper-text > h3 {
+    font-size: 32px;
+    line-height: 33px;
+    margin-bottom: 5px;
+
+  }
+
+  .school-text > p, .paper-text > p {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 65%;
+  }
+
+  .Signup-section > img {
+    height: 550px;
+  }
+
+  .signup-box > h3 {
+    font-size: 40px;
+  }
+  .signup-box > p {
+    font-size: 20px;
+  }
+
+  .logo-section {
+    margin-top: 15%
+  }
+
+
+}
+
+@media screen and (max-width: 850px) {
+  .carousel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .landing-text > h1 {
+    font-size: 60px;
+    line-height: 55px;
+  }
+
+  .landing-text > p {
+    font-size: 20px;
+  }
+
+  .Landing > img, #main {
+    height: 420px;
+  }
+
+  #papers, #uni {
+    height: 320px;
+  }
+
+  #alumni {
+    height: 420px;
+  }
+
+  .Signup-section > img {
+    height: 450px;
+  }
+
+  .signup-box > h3 {
+    font-size: 33px;
+    line-height: 50px;
+  }
+  .signup-box > p {
+    font-size: 18px;
+  }
+
+  .signupform > input {
+    padding: 10px;
+    margin: 7px 0;
+    min-width: 250px;
+    font-size: 13px;
+  }
+  
+  .signupform > button {
+    padding: 8px 0;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+}
+
+@media screen and (max-width: 690px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .mobile-signup-link {
+    display: block;
+  }
+
+  .signup-navlink {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: inline;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.886);
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .navbar-links li a {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .landing-text {
+    padding-top: 25%;
+  }
+
+  .landing-text > h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .landing-text > p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .Landing > img, #main {
+    height: 400px;
+  }
+  .Poster-section > img {
+    height: 300px;
+  }
+  .poster-text {
+    width: 60%;
+  }
+
+  .school-text, .paper-text {
+    width: 100vw;
+  }
+  
+  .poster-text > h3, .logo-section > h1 {
+    font-size: 25px;
+    line-height: 27px;
+      
+  }
+  .poster-text > p {
+      font-size: 11px;
+  }
+
+  #school {
+    height: 300px;
+  }
+
+  #papers, #uni {
+    height: 250px;
+  }
+
+  #alumni {
+    height: 300px;
+  }
+
+  #mission, #signup {
+    height: 60vh;
+  }
+
+  .school-text > h3,  .paper-text > h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .school-text > p,  .paper-text > p {
+    font-size: 13px;
+    width: 70%;
+  }
+
+  .Signup-section > img {
+    height: 350px;
+  }
+
+  .signup-box > h3 {
+    font-size: 25px;
+  }
+  .signup-box > p {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+  }
+
+  .copyright > p {
+    font-size: 12px;
+  }
+
+  .logo-section {
+    margin-top: 30%;
+  }
+  
+  
+  .logos {
+    width: 100%;
+  }
+  
+  .logo {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+
+  .landing-text > h1 {
+    font-size: 38px;
+    line-height: 35px;
+  }
+
+  .landing-text > p {
+    font-size: 17px;
+  }
+  .school-text > h3, .paper-text > h3 {
+    width: 90%;
+  }
+  .school-text > p, .paper-text > p {
+    font-size: 14px;
+    width: 90%;
+  }
+}
